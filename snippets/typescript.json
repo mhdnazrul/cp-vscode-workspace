@@ -1,0 +1,42 @@
+{
+  "Console log": {
+    "prefix": "log",
+    "body": "console.log($0)",
+    "description": "Console.log shortcut"
+  },
+  "Read line": {
+    "prefix": "readline",
+    "body": "import * as readline from 'node:readline';\nconst rl = readline.createInterface({ input: process.stdin });\nrl.on('line', (line: string) => {\n  $0\n});",
+    "description": "Read line from stdin"
+  },
+  "Solve function": {
+    "prefix": "solve",
+    "body": "function solve(): void {\n  $0\n}",
+    "description": "Typed solve function"
+  },
+  "Array range": {
+    "prefix": "range",
+    "body": "const range = (n: number): number[] => Array.from({ length: n }, (_, i) => i);",
+    "description": "Array range 0..n-1 with types"
+  },
+  "Debug log": {
+    "prefix": "debug",
+    "body": "const dbg = (...args: unknown[]): void => console.error(...args);",
+    "description": "Debug log to stderr with types"
+  },
+  "Frequency map": {
+    "prefix": "freq",
+    "body": "const freq = new Map<${1:string}, ${2:number}>();\nfor (const x of ${3:arr}) {\n  freq.set(x, (freq.get(x) || 0) as $2 + 1);\n}",
+    "description": "Typed frequency counter using Map"
+  },
+  "Direction vectors": {
+    "prefix": "dirs",
+    "body": "type Dir = [number, number];\nconst DIRS: Dir[] = [[0, 1], [1, 0], [0, -1], [-1, 0]];",
+    "description": "Typed 4-direction vectors"
+  },
+  "Main IIFE": {
+    "prefix": "main",
+    "body": "(function main(): void {\n  $0\n})();",
+    "description": "Typed main IIFE wrapper"
+  }
+}

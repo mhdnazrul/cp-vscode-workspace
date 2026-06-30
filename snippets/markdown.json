@@ -1,0 +1,57 @@
+{
+  "Code block": {
+    "prefix": "code",
+    "body": "```${1:language}\n$0\n```",
+    "description": "Fenced code block with language"
+  },
+  "Inline code": {
+    "prefix": "inline",
+    "body": "`${1:code}`$0",
+    "description": "Inline code formatting"
+  },
+  "Math block": {
+    "prefix": "math",
+    "body": "$$\n$0\n$$",
+    "description": "LaTeX math display block"
+  },
+  "Inline math": {
+    "prefix": "imath",
+    "body": "$${1:expression}$$$0",
+    "description": "Inline LaTeX math"
+  },
+  "Image with alt": {
+    "prefix": "img",
+    "body": "![${1:alt text}](${2:url})$0",
+    "description": "Image with alt text"
+  },
+  "Link": {
+    "prefix": "link",
+    "body": "[${1:text}](${2:url})$0",
+    "description": "Hyperlink"
+  },
+  "Bold": {
+    "prefix": "bold",
+    "body": "**${1:text}**$0",
+    "description": "Bold text"
+  },
+  "Italic": {
+    "prefix": "italic",
+    "body": "*${1:text}*$0",
+    "description": "Italic text"
+  },
+  "Checklist": {
+    "prefix": "check",
+    "body": "- [ ] ${1:task}",
+    "description": "Checklist item"
+  },
+  "Table": {
+    "prefix": "table",
+    "body": "| ${1:Header} | ${2:Header} |\n| --------- | --------- |\n| ${3:Cell} | ${4:Cell} |",
+    "description": "Markdown table"
+  },
+  "Problem template": {
+    "prefix": "cp",
+    "body": "## ${1:Problem Name}\n\n**Time Limit:** ${2:2}s  **Memory Limit:** ${3:256}MB\n\n### Description\n$4\n\n### Input\n$5\n\n### Output\n$6\n\n### Solution\n```${7:cpp}\n$0\n```",
+    "description": "Competitive Programming problem writeup template"
+  }
+}

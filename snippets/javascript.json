@@ -1,0 +1,42 @@
+{
+  "Console log": {
+    "prefix": "log",
+    "body": "console.log($0)",
+    "description": "Console.log shortcut"
+  },
+  "Read line": {
+    "prefix": "readline",
+    "body": "const readline = require('readline');\nconst rl = readline.createInterface({ input: process.stdin });\nrl.on('line', (line) => {\n  $0\n});",
+    "description": "Read line from stdin"
+  },
+  "Solve function": {
+    "prefix": "solve",
+    "body": "function solve() {\n  $0\n}",
+    "description": "Solve function"
+  },
+  "Array range": {
+    "prefix": "range",
+    "body": "const range = (n) => Array.from({ length: n }, (_, i) => i);",
+    "description": "Array range 0..n-1"
+  },
+  "Debug log": {
+    "prefix": "debug",
+    "body": "const dbg = (...args) => console.error(...args);",
+    "description": "Debug log to stderr"
+  },
+  "Frequency map": {
+    "prefix": "freq",
+    "body": "const freq = new Map();\nfor (const x of ${1:arr}) {\n  freq.set(x, (freq.get(x) || 0) + 1);\n}",
+    "description": "Frequency counter using Map"
+  },
+  "Direction vectors": {
+    "prefix": "dirs",
+    "body": "const DIRS = [[0, 1], [1, 0], [0, -1], [-1, 0]];",
+    "description": "4-direction vectors for grid traversal"
+  },
+  "Main IIFE": {
+    "prefix": "main",
+    "body": "(function main() {\n  $0\n})();",
+    "description": "Main IIFE wrapper"
+  }
+}
