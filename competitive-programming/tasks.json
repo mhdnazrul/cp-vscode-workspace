@@ -42,7 +42,7 @@
     {
       "label": "Python Run",
       "type": "shell",
-      "command": "python",
+      "command": "python3",
       "args": ["${file}"],
       "problemMatcher": [],
       "detail": "Run Python file"
