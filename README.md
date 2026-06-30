@@ -1,176 +1,84 @@
-## VS Code Customization Settings
+# Competitive Programming Workspace
 
-##Demo Photo:
-![Screenshot 2025-02-23 044517](https://github.com/user-attachments/assets/d48619d7-92fb-4574-842f-ce6a4363c399)
+[![VS Code](https://img.shields.io/badge/VS%20Code-1.90%2B-007ACC?logo=visual-studio-code)](https://code.visualstudio.com/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+A ready-to-use VS Code configuration optimized for **Competitive Programming** with C++, Python, JavaScript, and TypeScript. Includes fast I/O templates, debugging setup, build tasks, test case management, and code snippets.
 
-This repository contains my personalized VS Code settings designed to create a streamlined and efficient development environment. The configuration includes an Andromeda theme, essential extensions, and enhanced productivity settings for a variety of languages.
+## Features
 
-## 🌟 Features
+- **Competitive Programming** — C++ template with fast I/O, debug macro, modular arithmetic, and test-case loop
+- **Code Runner** — One-click execution for C++, Python, JS, TS
+- **Debugging** — gdb/lldb (C++) and Python debugger configs with preLaunchTask
+- **Build Tasks** — Compile C++ with `-O2 -Wall -DLOCAL`, run with input redirection
+- **Test Cases** — Input/output file management, diff checking, stress testing scripts
+- **Snippets** — 49 snippets across C++ (12), Python (10), JavaScript (8), TypeScript (8), Markdown (11)
+- **Profiles** — CP, Python, Web, Minimal — import what you need
+- **Backup & Restore** — PowerShell scripts for timestamped backups and one-command restore
+- **Settings Sync** — Git-based multi-machine sync via this repo
 
-- **Visual Theme**: Andromeda color theme with custom UI modifications for better aesthetics and focus.
-- **Productivity Boost**:
-  - Auto-formatting with Prettier for consistent code style.
-  - Smart code completion for faster development.
-  - Integrated terminal setup for seamless workflow.
-- **Language Support**:
-  - JavaScript/TypeScript
-  - Python/C/C++
-  - Web (HTML/CSS/SCSS)
-  - Markdown/YAML/GraphQL
-- **Workflow Enhancements**:
-  - Live Server integration for instant previews.
-  - Code Runner configuration for running code snippets in various languages.
-  - Advanced Emmet support for faster HTML/CSS development.
-
-## 🛠️ Installation
-
-To set up the environment on your machine, follow these steps:
-
-### 1. Clone the Repository
-
-Clone this repository to your local machine:
+## Quick Start
 
 ```bash
-git clone https://github.com/mhdnazrul/VS-Code-Customization-Settings.git
+git clone https://github.com/mhdnazrul/awesome-vscode-setup.git
+cd awesome-vscode-setup
+
+# Windows
+.\scripts\install-extensions.ps1
+.\scripts\restore.ps1
+
+# Linux/macOS
+chmod +x scripts/setup.sh && ./scripts/setup.sh
 ```
 
-### 2. Install Required Extensions
+Open VS Code, create a `.cpp` file, type `fastio` + Tab, press `Ctrl+Alt+N` to run.
 
-Based on your settings.json code, here are the extensions you'll need:
+## Screenshots
 
-1. Andromeda Theme
-2. Material Icon Theme
-3. Prettier
-4. Live Server
-5. Code Runner
-   Here is a list of recommended extensions for this setup. You can install them manually or use the following `extensions.json` configuration:
-   extensions.json File:
+![Editor with Andromeda theme](https://github.com/user-attachments/assets/d48619d7-92fb-4574-842f-ce6a4363c399)
 
-```json
-{
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "ms-vscode.cpptools",
-    "ms-python.python",
-    "ritwickdey.liveserver",
-    "formulahendry.code-runner"
-  ]
-}
-```
+## Repository Structure
 
-## 🎨 Customization Guide
+| Path | Contents |
+|------|----------|
+| `.vscode/settings.json` | Editor configuration (127 lines, telemetry off, git QoL) |
+| `.vscode/extensions.json` | 12 recommended extensions |
+| `.vscode/keybindings.json` | Keyboard shortcuts |
+| `competitive-programming/` | CP template, code-runner, debugging, testcases, launch/task configs |
+| `snippets/` | Language-specific code snippets |
+| `profiles/` | VS Code profiles (CP, Python, Web, Minimal) |
+| `scripts/` | Automation: setup, install-extensions, backup, restore |
+| `docs/` | Installation, sync, backup, restore, tips, FAQ, troubleshooting |
 
-### Font Installation
+## Documentation
 
-1. Download [JetBrains Mono](https://www.jetbrains.com/lp/mono/).
-2. Install it system-wide.
-3. Update VS Code settings to use JetBrains Mono:
+- [Installation](docs/installation.md) — Full setup guide
+- [Settings Sync](docs/sync.md) — Multi-machine sync via git
+- [Backup](docs/backup.md) — Timestamped settings snapshots
+- [Restore](docs/restore.md) — Apply repo settings
+- [Tips](docs/tips.md) — Productivity and CP shortcuts
+- [FAQ](docs/faq.md) — Common questions
+- [Troubleshooting](docs/troubleshooting.md) — Fix common issues
 
-```json
-"editor.fontFamily": "JetBrains Mono"
-```
+## Extensions
 
-### Theme Configuration
+See `.vscode/extensions.json` for the full list. Key extensions:
 
-To further customize your theme settings, add this to your `settings.json`:
+| Extension | Purpose |
+|-----------|---------|
+| Andromeda | Dark color theme |
+| Material Icon Theme | File icons |
+| C/C++ (ms-vscode.cpptools) | C++ IntelliSense and debugging |
+| Python (ms-python.python) | Python IntelliSense and debugging |
+| Prettier | Code formatter |
+| Code Runner | One-click code execution |
+| Live Server | HTML preview |
+| GitHub Copilot | AI-assisted coding |
 
-```json
-"workbench.colorCustomizations": {
-  "tab.activeBackground": "#706fd3",
-  "statusBar.background": "#474787"
-}
-```
+## License
 
-## ⚙️ Key Configuration Highlights
-
-| Category        | Setting          | Value            |
-| --------------- | ---------------- | ---------------- |
-| **Editor**      | Font Size        | 16px             |
-| **Formatting**  | Auto-save Delay  | 800ms            |
-| **Terminal**    | Font Family      | Cascadia Code PL |
-| **UI**          | Sidebar Location | Right            |
-| **Performance** | Minimap          | Disabled         |
-
-## 🔌 Required Extensions
-
-Make sure to install these essential extensions for the best experience:
-
-1. [Andromeda Theme](https://marketplace.visualstudio.com/items?itemName=EliverLara.andromeda)
-2. [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-3. [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-4. [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-
-## 🤝 Contributing
-
-If you’d like to contribute to this repository, follow these steps:
-
-1. Fork the repository.
-2. Create a feature branch:  
-   `git checkout -b feature/improvement`
-3. Commit your changes:  
-   `git commit -m 'Add some feature'`
-4. Push to your branch:  
-   `git push origin feature/improvement`
-5. Open a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
-
-## 🙏 Acknowledgments
-
-- **Andromeda Theme** by Oliver Lara
-- **JetBrains Mono** typeface for improved readability.
-- **Microsoft VS Code** team for building such a great IDE.
-
----
-
-## Additional Recommendations
-
-### 1. **Include Screenshots**:
-
-Showcase how your setup looks by adding screenshots:
-
-- Editor layout and color theme.
-- Integrated terminal configuration.
-- Code in different languages with the theme applied.
-
-### 2. **Extension Management**:
-
-If you want to track your installed extensions, run the following command to generate a list:
-
-```bash
-# Generate extension list
-code --list-extensions > extensions.txt
-```
-
-### 3. **Version Compatibility**:
-
-You can create a `vscode-compatibility.md` file with:
-
-- Minimum required VS Code version.
-- Operating system requirements.
-- Extension version recommendations.
-
-### 4. **Setup Script (Optional)**:
-
-For automatic setup, consider adding a setup script like:
-
-```bash
-#!/bin/bash
-cp .vscode/settings.json ~/.config/Code/User/
-```
+MIT — see [LICENSE](LICENSE).
 
 ## Author
 
-Nazrul Islam
-mhdnazrul511@gmail.com
-
-#Demo Photo:
-![Screenshot 2025-02-23 044557](https://github.com/user-attachments/assets/62725b82-4bbd-425a-9751-7a090a0023f1)
-![Screenshot 2025-02-23 044546](https://github.com/user-attachments/assets/68177cce-1c3f-4589-8edf-d6321c37e35d)
-![Screenshot 2025-02-23 044535](https://github.com/user-attachments/assets/0460e8a2-2549-4fea-bced-b06e52d47baf)
-![Screenshot 2025-02-23 044526](https://github.com/user-attachments/assets/0434d476-5a26-457f-a6d7-a4c9cbea6733)
-![Screenshot 2025-02-23 044517](https://github.com/user-attachments/assets/811677fd-787e-4aa4-9015-6bcd4135d16c)
-
+Nazrul Islam — mhdnazrul511@gmail.com
