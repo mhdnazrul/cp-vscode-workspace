@@ -5,7 +5,7 @@ VS Code provides a full debugging experience for C++ and Python.
 ## Prerequisites
 
 - **C++**: Install [gdb](https://www.sourceware.org/gdb/) (Linux/WSL), [lldb](https://lldb.llvm.org/) (macOS), or VS's debugger (Windows).
-- **Python**: The [Python extension](ms-python.python) includes the debugger.
+- **Python**: The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) includes the debugger.
 
 ## Launch Configuration
 
