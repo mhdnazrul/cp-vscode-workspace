@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C++ Build",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-DLOCAL",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile C++ with O2 and LOCAL flag"
+    },
+    {
+      "label": "C++ Run",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension}",
+      "dependsOn": ["C++ Build"],
+      "problemMatcher": [],
+      "detail": "Build and run the current C++ file"
+    },
+    {
+      "label": "C++ Run with input",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": ["<", "${fileDirname}/input.txt"],
+      "dependsOn": ["C++ Build"],
+      "problemMatcher": [],
+      "detail": "Build and run with input.txt"
+    },
+    {
+      "label": "Python Run",
+      "type": "shell",
+      "command": "python",
+      "args": ["${file}"],
+      "problemMatcher": [],
+      "detail": "Run Python file"
+    }
+  ]
+}
